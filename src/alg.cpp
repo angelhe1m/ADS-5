@@ -45,7 +45,7 @@ std::string mirOne(const std::string& a) {
 }
 std::string infx2pstfx(std::string inf) {
   std::string s;
-  Tstack<char, 100> stack1;
+  TStack<char, 100> stack1;
   for (auto& op : inf) {
     int priority = Prioritetfunc(op);
     if (priority == -1) {
@@ -91,7 +91,7 @@ int count(const int& a, const int& b, const int& operation) {
   return 0;
 }
 int eval(std::string pref) {
-  Tstack<int, 100> stack1;
+  TStack<int, 100> stack1;
   std::string num = "";
   for (size_t i = 0; i < pref.size(); i++) {
     if (Prioritetfunc(pref[i]) == -1) {
